@@ -1,0 +1,25 @@
+html,
+body {
+    background-color: black;
+    color: white;
+    height: 100%;
+    margin: 0; 
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+    font-size: .875rem;
+}
+
+hr {
+    background-color: grey;
+}
+  
+  .feather {
+    width: 16px;
+    height: 16px;
+    vertical-align: text-bottom;
+  }
+
+
+  a {
+    text-decoration: none;
+}
+

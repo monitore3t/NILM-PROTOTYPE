@@ -1,0 +1,28 @@
+table {
+    background: rgba(35, 70, 99, 0.541);
+    border-collapse: collapse;
+    border: rgb(131, 130, 130) 2px solid;
+    width: 100%;
+    margin-top:2%;
+    margin-bottom:2%;
+}
+
+table th {
+    text-align: center;
+    border: rgb(131, 130, 130) 2px solid;
+    font-size: 150%;
+    color: rgba(236, 243, 245, 0.726);
+}
+
+table tr {
+    text-align: center;
+    border: rgb(131, 130, 130) 2px solid;
+}
+
+table td {
+    text-align: center;
+    border: rgb(131, 130, 130) 2px solid;
+    font-size: 120%;
+    color: rgba(211, 219, 221, 0.726);
+}
+

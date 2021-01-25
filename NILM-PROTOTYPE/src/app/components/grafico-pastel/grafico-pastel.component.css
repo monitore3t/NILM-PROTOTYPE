@@ -1,0 +1,10 @@
+.chart-container {
+    display: grid;
+    height: 500px;
+    background-color: rgba(83, 76, 65, 0.274);
+    border-radius: 5px;
+}
+
+.pie-label {
+    font-size: 100px !important;
+}

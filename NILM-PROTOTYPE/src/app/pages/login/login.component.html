@@ -1,0 +1,35 @@
+
+<div class="colo">
+<div class="container animated fadeInRight">
+    <div class="row">
+        <div class="col-md-6">
+            <div >
+                <form (ngSubmit)="login( f )"
+                    #f="ngForm"
+                    class="box">
+                    <h1>NILM-PROTOTYPE</h1>
+                    <p class="text-muted"> ¡Por favor ingresa tu correo y contraseña!</p> 
+                    <span *ngIf="f.submitted && f.controls['email'].errors" class="text-danger animated fadeIn">El correo es obligatorio</span>
+                    <input type="text" required email name="email" [(ngModel)]="usuario.email" placeholder="Correo"> 
+                    <span *ngIf="f.submitted && f.controls['password'].errors" class="text-danger animated fadeIn">Se deben ingresar al menos 6 caracteres</span>
+                    <input type="password" required minlength="6" name="password" [(ngModel)]="usuario.password" placeholder="Contraseña">  
+                    <div class="contact100-form-checkbox">
+                        <input [(ngModel)]="recordarme" class="input-checkbox100" id="ckb1" type="checkbox" name="remember-me">
+                            <label style="margin-left: 2%;" class="label-checkbox100 txt1 text-muted" for="ckb1">
+                                Recordar mi correo
+                            </label>
+                        </div>
+                    <input type="submit" name="" value="Ingresar" href="#">
+                    <div class="col-md-12">
+                        <ul class="social-network social-circle">
+                            <li><a href="http://e3t.uis.edu.co/" class="icoE3t" title="E3T"><i class="fab"><img alt="Profile Photo" src="./assets/img/e3t.png" width="70%" height="70%"/></i></a></li>
+                            <li><a href="http://www.uis.edu.co/webUIS/es/index.jsp" class="icoUis" title="UIS"><i class="fab"><img alt="Profile Photo" src="./assets/img/LOGOUIS.png" width="70%" height="70%"/></i></a></li>
+                            <li><a href="https://console.firebase.google.com/u/0/project/firestore-nilmprototype/overview#" class="icoFirebase" title="FIREBASE"><i class="fab"><img alt="Profile Photo" src="./assets/img/firebase.png" width="65%" height="65%"/></i></a></li>
+                        </ul>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+</div>

@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "firestore-nilmprototype": {
+      "hosting": {
+        "NILM-PROTOTYPE": [
+          "firestore-nilmprototype"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "firestore-nilmprototype"
+  }
+}

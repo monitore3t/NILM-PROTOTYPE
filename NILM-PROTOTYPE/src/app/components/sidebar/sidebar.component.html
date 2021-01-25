@@ -1,0 +1,28 @@
+<app-navbar  [name]=name></app-navbar>
+<div class="container-fluid">
+    <div class="row">
+        <nav  class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse">
+            <div class="sidebar-sticky pt-3">
+                <div class="sidebar-heading" style="margin-top:-25px; margin-left:15px; margin-right:15px; ">
+                    <a class="nav-link" href="http://e3t.uis.edu.co/"><img alt="Profile Photo" src="./assets/img/e3t.png" id="imge"/><span style="margin-left:5px; font-size:150%; color: aliceblue; ">NILM-PROTOTYPE</span></a>
+                </div>
+                <hr>
+                <ul class="nav flex-column">
+                    <li >
+                        <a class=" list-item" routerLink="electrodomesticos" routerLinkActive="selected" (click)="cambioElemento('1')" >
+                            <span data-feather="" ><i class="fa fa-pie-chart fa-2x" aria-hidden="true" style="color: aliceblue;"></i><span style="margin-left:15px; font-size:102%; color: aliceblue; ">Electrodomésticos</span></span> 
+                         </a>
+                    </li>
+                    <li >
+                        <a class="list-item" routerLink="total" routerLinkActive="selected" (click)="cambioElemento('2')">
+                            <span data-feather=""><i class="fa fa-area-chart fa-2x" aria-hidden="true" style="color: aliceblue;"></i></span><span style="margin-left:15px; font-size:102%; color: aliceblue; ">Potencia Total</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-md-4">
+           <router-outlet></router-outlet>
+        </main>
+    </div>
+</div>

@@ -1,0 +1,22 @@
+<div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+    <h1 class="h2">Potencia Total</h1>
+    <div class="btn-toolbar mb-2 mb-md-0">
+    </div>
+</div>
+
+<div clas="row">
+    <div class="col">
+        <app-grafico-total [results]="elementos"></app-grafico-total>
+    </div>
+</div>
+<h3 style="text-align: center; margin-top:2%;">Consumo Total</h3>
+<div class="table-responsive">
+    <table >
+        <thead>
+            <tr>
+                <th>Total Potencia</th>
+                <th>{{tot}}</th>
+            </tr>
+        </thead>
+    </table>
+</div>

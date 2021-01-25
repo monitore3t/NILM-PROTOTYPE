@@ -1,0 +1,21 @@
+<div class="chart-container">
+    <ngx-charts-pie-chart 
+    [scheme]="colorScheme" 
+    [results]="results" 
+    [gradient]="gradient" 
+    [legend]="showLegend" 
+    [legendPosition]="legendPosition" 
+    [labels]="showLabels" 
+    [doughnut]="isDoughnut" 
+    (select)="onSelect($event)" 
+    (activate)="onActivate($event)" 
+    (deactivate)="onDeactivate($event)"
+    [explodeSlices]="explodeSlices" 
+    [animations]="animations" 
+    [labels]="labels" 
+    [legend]="legend" 
+    [legendTitle]="legendTitle" 
+    [arcWidth]="arcWidth"
+    style="fill: white;">
+    </ngx-charts-pie-chart>
+</div>

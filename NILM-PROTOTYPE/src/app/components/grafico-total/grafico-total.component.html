@@ -1,0 +1,17 @@
+
+<div class="chart-container">
+<ngx-charts-advanced-pie-chart 
+  
+  [scheme]="colorScheme"
+  [results]="results"
+  [gradient]="gradient"
+  (select)="onSelect($event)"
+  (activate)="onActivate($event)"
+  (deactivate)="onDeactivate($event)"
+  [animations]="animations"
+  [percentageFormatting]="percentageFormatting"
+  style="fill: white;"
+  class="total"
+  >
+</ngx-charts-advanced-pie-chart>
+</div>
