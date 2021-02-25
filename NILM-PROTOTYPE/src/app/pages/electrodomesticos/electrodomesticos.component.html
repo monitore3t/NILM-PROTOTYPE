@@ -11,19 +11,35 @@
 <hr style="margin-top:2%; height: 5%; background-color: rgba(79, 134, 136, 0.349);">
 <h3 style="text-align: center; margin-top:2%;">Consumo Electrodomésticos</h3>
 <div class="table-responsive">
-    <table >
+    <table>
         <thead>
             <tr>
+                <th>Estado</th>
                 <th>Electrodoméstico</th>
                 <th>Potencia</th>
                 <th>Hora de Conexión</th>
+                <th>Hora de Desconexión</th>
+                <th>Duración [hh:mm:ss]</th>
+                <th>Total Consumo [kWh]</th>
             </tr>
         </thead>
         <tbody>
             <tr *ngFor="let item of elementos">
+                <td *ngIf="item.banderaCon && !item.banderaDes"><span style="color: green;"><b>Conectado</b></span></td>
+                <td *ngIf="!item.banderaCon && item.banderaDes"><span style="color: red;"><b>Desconectado</b></span></td>
                 <td>{{item.name}}</td>
-                <td>{{item.value}}</td>
-                <td>{{item.tiempo.seconds + dato1  | date: "mediumTime"}}</td>
+                <td>{{item.value | number: '0.1-6'}}</td>
+                <td *ngIf="item.copPotencia != 0">{{item.tiempo.seconds + dato1 | date: "mediumTime"}}</td>
+                <td *ngIf="item.copPotencia == 0"></td>
+                <td *ngIf="!item.banderaCon && item.banderaDes && item.copPotencia != 0">{{item.desconexion.seconds + dato1 | date: "mediumTime"}}</td>
+                <td *ngIf="item.banderaCon && !item.banderaDes && item.copPotencia != 0"></td>
+                <td *ngIf="!item.banderaCon && item.banderaDes && item.copPotencia == 0"></td>
+                <td *ngIf="!item.banderaCon && item.banderaDes && item.copPotencia != 0">{{item.duracion | date: "HH:mm:ss"}}</td>
+                <td *ngIf="item.banderaCon && !item.banderaDes && item.copPotencia != 0"></td>
+                <td *ngIf="!item.banderaCon && item.banderaDes && item.copPotencia == 0"></td>
+                <td *ngIf="!item.banderaCon && item.banderaDes && item.copPotencia != 0">{{item.consumo | number: '0.1-6'}}</td>
+                <td *ngIf="item.banderaCon && !item.banderaDes && item.copPotencia != 0"></td>
+                <td *ngIf="!item.banderaCon && item.banderaDes && item.copPotencia == 0"></td>
             </tr>
         </tbody>
     </table>
